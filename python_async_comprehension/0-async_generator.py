@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Coroutine loops 10 times, waits 1 second each time, and yields a random number from 0 to 10.
+The coroutine will loop 10 times, each time asynchronously wait 1 second,
+then yield a random number between 0 and 10. Use the random module.
 """
 import asyncio
 import random
