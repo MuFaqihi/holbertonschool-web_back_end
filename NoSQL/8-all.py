@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
-""" pymongo
+"""
+Module that lists all documents in a MongoDB collection
 """
 
-
-def insert_school(mongo_collection, **kwargs):
-    """ inserts a new document in a mongo collection
+def list_all(mongo_collection):
     """
-    new_document = mongo_collection.insert_one(kwargs)
-    return new_document.inserted_id
+    Lists all documents in a MongoDB collection
+
+    Args:
+        mongo_collection: pymongo collection object
+
+    Returns:
+        List of documents, or empty list if none found
+    """
+    return list(mongo_collection.find())
